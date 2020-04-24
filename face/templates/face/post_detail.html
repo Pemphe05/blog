@@ -1,0 +1,12 @@
+{%extends 'face/layout.html'%}
+
+{% block content %}
+	<div class="posts">
+		<h2>{{ object.title }}</h2>
+		<h4>{{ object.author }}</h4>
+		<p>{{ object.content }}</p>
+	</div>
+
+	<a href="{% url 'edit-post' object.id %}" title="">+ Edit Blog Post</a>
+	<a href="{% url 'delete-post' object.id %}" title="">+ Delete Post</a>
+{% endblock content %}

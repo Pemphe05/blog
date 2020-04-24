@@ -1,0 +1,12 @@
+{% extends 'face/layout.html'%}
+
+{% block content %}
+	{% for blog in blogs %}
+		<div class="blog_posts">
+			<h2><a href="{% url 'post-detail' blog.id %}">{{ blog.title }}</a></h2>
+			<h4>{{ blog.author }}</h4>
+			
+		</div>
+
+	{% endfor %}
+{% endblock content %}

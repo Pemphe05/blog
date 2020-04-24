@@ -1,0 +1,62 @@
+body {
+font-family: 'Source Sans Pro', sans-serif;
+/*font-size: 1.8px;*/
+}
+header {
+border-bottom: 1px solid;
+margin-bottom: 2rem;
+display: flex;
+color: red;
+}
+.navbar ul{
+	list-style: none;
+	display: flex;
+	margin-bottom: 5rem;
+	display: center;
+}
+
+.navbar li{
+	padding: 2rem;
+}
+
+
+.nav-left {
+	margin-top: auto;
+	margin-right: auto;
+}
+
+.nav-right {
+	display: flex;
+	margin-top: auto;
+	padding-top: 2rem;
+}
+
+.blog_posts {
+margin-bottom: 2rem;
+border: solid;
+}
+
+.blog_posts h2 {
+margin: 2rem;
+border-bottom: 1px solid;
+margin-bottom: 2rem;
+}
+
+.blog_posts h4{
+margin: 2rem;
+}
+
+.blog_posts  h2 a,
+.blog_posts  h2 a:visited {
+color: blue;
+text-decoration: none;
+}
+/*
+.posts h2{
+margin: 2rem;
+font-weight:
+}
+
+.posts h2 a:hover {
+color: red;
+}*/

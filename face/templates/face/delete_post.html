@@ -1,0 +1,10 @@
+{%extends 'face/layout.html'%}
+{%block content%}
+	<h2>Delete Post</h2>
+	<form action="" method="post"  enctype="multipart/form-data">
+		{% csrf_token %}
+		<p>Are you sure you want o delete "{{ object.title }}"?</p>
+		<input type="submit" name="" value="Confirm" />
+	</form>
+
+{%endblock content%}

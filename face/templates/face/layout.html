@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device=width, intial-scale=1">
+	<title>The Blog | TB</title>
+	<link rel="stylesheet" href={% static "face/main.css" %}>
+</head>
+<body>
+	<header>
+		<div class="navbar">
+			{%include 'face/navbar.html'%}
+		</div>
+		<br>
+		
+		<div class="nav-left">
+			<h1>The New Blog</h1>
+		</div>
+		<div class="nav-right">
+			<a href="{% url 'new-post' %}" title="">+ New Blog Post</a>
+		</div>
+
+		
+	</header><!-- /header -->
+	{% if user.is_authenticated %}
+		<p>Hello {{ user.username }}!</p>
+		<p><a href="{% url 'logout' %}" >Log out</a> </p>
+	{% else %}
+		<p>You are not logged in.</p>
+		<p>Log in <a href="{% url 'login' %}">here</a> </p>
+	{% endif %}
+	<div>
+		{% block content %}
+		{% endblock content %}
+		
+	</div>
+</body>
+	
+</html>

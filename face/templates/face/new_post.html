@@ -1,0 +1,10 @@
+{% extends 'face/layout.html'%}
+{%block content%}
+	<h2>New Post</h2>
+	<form action="" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p}}
+		<input type="submit" name="" value="Save" />
+		
+	</form>
+{%endblock content%}
